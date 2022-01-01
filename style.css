@@ -1,10 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Pushster&display=swap");
+
+/*Custom properties/variables*/
+:root {
+  --cursive-font: "Pushster", gabriola;
+  --bg-img: url("./assets/cool-background.png");
+  --font-family: Garamond, cambria;
+}
+
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 @media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 61.25em) {
   html {
     font-size: 58%;
   }
@@ -16,12 +31,22 @@ html {
   }
 }
 
-@media (max-width: 61.25em) {
-  html {
-    font-size: 58%;
-  }
+body {
+  background: rgb(19, 209, 167);
+  background: linear-gradient(
+    163deg,
+    rgba(19, 209, 167, 1) 0%,
+    rgba(17, 222, 221, 1) 8%,
+    rgba(81, 109, 187, 1) 58%,
+    rgba(12, 95, 212, 1) 100%
+  );
+  font-family: var(--font-family);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
-body {
-  background-image: url("./assets/cool-background.png");
+h1,
+h2 {
+  font-family: var(--cursive-font);
 }
